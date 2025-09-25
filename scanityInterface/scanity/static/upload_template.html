@@ -1,0 +1,128 @@
+{% extends 'layout/base_template.html' %}
+
+{% block styles %}
+    <title>Загрузка снимка</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="page-title">Добавление нового снимка</h1>
+        
+        <div class="form-container">
+            <h2 class="form-title">Данные о снимке</h2>
+            <form id="dataForm" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fileInput">Файл</label>
+                    <input type="file" id="fileInput" name="file" accept="image/*">
+                    <div class="file-info">Поддерживаемые форматы: PNG, JPEG</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dateInput">Дата</label>
+                    <input type="datetime-local" step="1" id="dateInput" name="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nameInput">Имя</label>
+                    <input type="text" id="nameInput" name="name" placeholder="Введите имя пациента" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descriptionInput">Описание</label>
+                    <textarea id="descriptionInput" name="description" placeholder="Введите описание..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить данные</button>
+            </form>
+            
+            <div class="preview-section">
+                <h3 class="preview-title">Предпросмотр данных</h3>
+                <div class="preview-content" id="previewContent">
+                    <p>Заполните форму, чтобы увидеть предпросмотр данных здесь.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Получаем элементы формы
+        const form = document.getElementById('dataForm');
+        const fileInput = document.getElementById('fileInput');
+        const dateInput = document.getElementById('dateInput');
+        const nameInput = document.getElementById('nameInput');
+        const descriptionInput = document.getElementById('descriptionInput');
+        const previewContent = document.getElementById('previewContent');
+        
+        // Функция для обновления предпросмотра
+        function updatePreview() {
+            let previewHTML = '';
+            
+            // Проверяем, есть ли выбранный файл
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                previewHTML += `
+                    <div class="preview-item">
+                        <span class="preview-label">Файл:</span> ${file.name} (${(file.size / 1024).toFixed(2)} KB)
+                    </div>
+                `;
+            } else {
+                previewHTML += `
+                    <div class="preview-item">
+                        <span class="preview-label">Файл:</span> не выбран
+                    </div>
+                `;
+            }
+            
+            // Добавляем дату
+            previewHTML += `
+                <div class="preview-item">
+                    <span class="preview-label">Дата:</span> ${dateInput.value || 'не указана'}
+                </div>
+            `;
+            
+            // Добавляем имя
+            previewHTML += `
+                <div class="preview-item">
+                    <span class="preview-label">Пациент:</span> ${nameInput.value || 'не указано'}
+                </div>
+            `;
+            
+            // Добавляем описание
+            previewHTML += `
+                <div class="preview-item">
+                    <span class="preview-label">Описание:</span> ${descriptionInput.value || 'не указано'}
+                </div>
+            `;
+            
+            previewContent.innerHTML = previewHTML;
+        }
+        
+        // Обработчики событий для обновления предпросмотра при изменении данных
+        fileInput.addEventListener('change', updatePreview);
+        dateInput.addEventListener('change', updatePreview);
+        nameInput.addEventListener('input', updatePreview);
+        descriptionInput.addEventListener('input', updatePreview);
+        
+        // Обработчик отправки формы
+        // form.addEventListener('submit', function(e) {
+        //     e.preventDefault();
+            
+        //     // Проверяем, заполнены ли обязательные поля
+        //     if (!dateInput.value || !nameInput.value || !descriptionInput.value) {
+        //         alert('Пожалуйста, заполните все обязательные поля: дата, имя и описание.');
+        //         return;
+        //     }
+            
+        //     // В реальном приложении здесь был бы код для отправки данных на сервер
+        //     alert('Данные успешно отправлены! В реальном приложении они были бы сохранены на сервере.');
+            
+        //     // Очищаем форму после отправки (опционально)
+        //     // form.reset();
+        //     // updatePreview();
+        // });
+        
+        // Инициализируем предпросмотр при загрузке страницы
+        updatePreview();
+    </script>
+{% endblock %}

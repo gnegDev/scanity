@@ -8,6 +8,7 @@ import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.S3Configuration;
+import software.amazon.awssdk.services.s3.presigner.S3Presigner;
 
 import java.net.URI;
 
@@ -42,8 +43,27 @@ public class S3ClientConfig {
                         .build())
                 .build();
 
-        s3Client.createBucket(request -> request.bucket(bucket));
-        System.out.println("Created bucket " + bucket);
+        try {
+            s3Client.createBucket(request -> request.bucket(bucket));
+            System.out.println("Created bucket " + bucket);
+        } catch (Exception exception) {
+            System.out.println(exception);
+        }
+
         return s3Client;
+    }
+
+    @Bean
+    public S3Presigner s3Presigner() {
+        AwsBasicCredentials credentials = AwsBasicCredentials.create(accessKey, secretKey);
+
+        return S3Presigner.builder()
+                .endpointOverride(URI.create(endpoint))
+                .credentialsProvider(StaticCredentialsProvider.create(credentials))
+                .region(Region.of(region))
+                .serviceConfiguration(S3Configuration.builder()
+                        .pathStyleAccessEnabled(true)
+                        .build())
+                .build();
     }
 }

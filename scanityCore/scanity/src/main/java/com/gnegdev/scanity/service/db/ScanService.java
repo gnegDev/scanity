@@ -22,12 +22,19 @@ public class ScanService {
 
     public Scan uploadScan(UploadScanRequest uploadScanRequest) throws IOException {
         Scan scan = new Scan();
+
         String filename = s3ClientService.uploadFile(uploadScanRequest);
+        String url = s3ClientService.getUrl(filename);
+
         User user = userService.getUserReferenceByUUID(uploadScanRequest.getUserId());
 
         scan.setFilename(filename);
-        scan.setDate(uploadScanRequest.getDate());
+
+        scan.setUrl(url);
         scan.setUser(user);
+
+        scan.setName(uploadScanRequest.getName());
+        scan.setDate(uploadScanRequest.getDate());
         scan.setDescription(uploadScanRequest.getDescription());
 
         return scanRepository.save(scan);

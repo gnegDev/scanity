@@ -26,7 +26,7 @@ public class AuthController {
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<?> logInUser(@Valid @RequestBody LogInUserRequest logInUserRequest) {
         Optional<User> user = userService.getUserByEmail(logInUserRequest.getEmail());
 
