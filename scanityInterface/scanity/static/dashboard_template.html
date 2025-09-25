@@ -1,0 +1,24 @@
+{% extends 'layout/base_template.html' %}
+
+{% block styles %}
+    <title>Дэшборд</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="page-title">Загруженные снимки</h1>
+        <div class="panels-grid">
+            {% for scan in scans %}
+                <div class="panel">
+                    <img src="{{ scan['scan_url'] }}" alt="Снимок КТ" class="panel-image">
+                    <div class="panel-content">
+<!--                            <h3 class="panel-title">Веб-разработка</h3>-->
+                        <p class="panel-description">{{ scan['date'] }}<br>{{ scan['name'] }}</p>
+                        <a href="dashboard/{{ scan['scan_id'] }}" class="panel-button">Подробнее</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

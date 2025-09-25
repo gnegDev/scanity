@@ -1,0 +1,95 @@
+{% extends 'layout/base_template.html' %}
+
+{% block styles %}
+    <title>Снимок</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scan_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="page-title">Просмотр и информация о снимке</h1>
+        
+        <div class="images-container">
+            <section class="image-section">
+                <div class="image-caption">Снимок</div>
+                <div class="image-wrapper" onclick="openImage('image1')">
+                    <img src="{{ scan['scan_url'] }}" 
+                            alt="Снимок КТ" 
+                            class="image-preview" 
+                            id="image1">
+                </div>
+            </section>
+            
+            <section class="image-section">
+                <div class="image-caption">Результат анализа</div>
+                <div class="image-wrapper" onclick="openImage('image2')">
+                    <img src="" 
+                            alt="Результат анализа" 
+                            class="image-preview" 
+                            id="image2">
+                </div>
+            </section>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-panel">
+                <h3 class="info-title">Информация о снимке</h3>
+                <div class="info-content" id="info1">
+                    <p><strong>ID снимка: </strong>{{ scan['scan_id'] }}</p>
+                    <p><strong>Дата: </strong>{{ scan['date'] }}</p>
+                    <p><strong>Пациент: </strong>{{ scan['name'] }}</p>
+                    <p><strong>Описание: </strong>{{ scan['scan_description'] }}</p>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <h3 class="info-title">Информация об анализе</h3>
+                <div class="info-content" id="info2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    <!-- Modal for image display -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <script>
+        // Function to open image in modal
+        function openImage(imageId) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = document.getElementById(imageId);
+            
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            
+            // Update information panel
+            updateInfoPanel(imageId);
+        }
+        
+        // Function to close modal
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+{% endblock %}

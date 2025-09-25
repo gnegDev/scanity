@@ -1,0 +1,18 @@
+{% extends 'layout/base_template.html' %}
+
+{% block styles %}
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="page-title">Главная страница</h1>
+        <div class="menu-container">
+            <h2 class="menu-title">Меню</h2>
+            <h3 class="title">Веб-сервис для анализа КТ снимков с использованием AI и ML.</h3>
+            <a href="/auth" class="menu-btn">Войти в систему</a>
+            <a href="https://github.com/gnegDev/scanity" class="menu-btn">Исходный код</a>
+        </div>
+    </div>
+{% endblock %}

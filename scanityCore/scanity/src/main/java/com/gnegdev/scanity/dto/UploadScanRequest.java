@@ -10,13 +10,15 @@ import java.util.UUID;
 
 @Data
 public class UploadScanRequest {
+    @JsonProperty(value = "user_id")
+    private final UUID userId;
+
     @NotNull
     private final MultipartFile file;
 
     private final LocalDateTime date;
 
-    @JsonProperty(value = "user_id")
-    private final UUID userId;
+    private final String name;
 
     private final String description;
 }

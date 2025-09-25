@@ -20,8 +20,11 @@ public class Scan {
     @Column(name = "id", nullable = false)
     private UUID id;
 
-    @Column(name = "filename", nullable = false, unique = true)
+    @Column(name = "filename", nullable = false, unique = true, length = 1024)
     private String filename;
+
+    @Column(name = "url", nullable = false, unique = true, length = 1024)
+    private String url;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
@@ -34,5 +37,8 @@ public class Scan {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "name", nullable = false)
+    private String name;
 
 }

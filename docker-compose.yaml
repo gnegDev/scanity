@@ -1,8 +1,12 @@
 services:
-#  scanity_interface:
-#    build: scanityInterface/scanity
-#    ports:
-#      - "5000:5000"
+  scanity_interface:
+    build: scanityInterface
+    ports:
+      - "5000:5000"
+    environment:
+      API_HOST: http://service:8080
+    depends_on:
+      - service
 
   service:
     build: scanityCore
@@ -13,7 +17,7 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: root
 
-      S3_ENDPOINT: http://s3:9000
+      S3_ENDPOINT: http://172.17.0.1:9000
       S3_BUCKET: scanity-s3-dev
       S3_REGION: ru-central1
 
@@ -43,13 +47,15 @@ services:
     ports:
       - "9000:9000"
       - "9001:9001"
+#    network_mode: host
     environment:
       MINIO_ROOT_USER: minioadmin
       MINIO_ROOT_PASSWORD: minioadmin
-      MINIO_DEFAULT_BUCKETS: scanity-s3-dev
+#      MINIO_DEFAULT_BUCKETS: scanity-s3-dev
 #    volumes:
 #      - minio_data:/data
     command: server /data --console-address ":9001"
+
 
 
 
