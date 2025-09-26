@@ -1,5 +1,7 @@
 # Scanity
-Web service for analyzing CT scans.
+Web service for analyzing CT scans.  
+Screenshots: https://github.com/gnegDev/scanity/wiki/Screenshots
+
 <img alt="dashboard_screenshot" src="https://github.com/user-attachments/assets/54ff2e01-d8b1-4bee-a943-00a0ae766c12" />
 
 ## Building project
