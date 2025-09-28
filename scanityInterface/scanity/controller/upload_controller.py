@@ -25,10 +25,9 @@ def upload_page():
         }
 
         file = request.files["file"]
+        print(file.content_type)
         files = {'file': (file.filename, file.read(), file.content_type)}
 
-        # headers = {"Content-Type": "application/json"}
-        print(body)
         response = requests.post(API_HOST + "/scanity/api/scans/upload", data=body, files=files)
 
         if response.status_code == 201:

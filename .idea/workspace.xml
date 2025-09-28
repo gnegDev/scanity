@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7a3373c3-9057-4fae-b624-de680d35b2c2" name="Changes" comment="Interface updates">
-      <change beforePath="$PROJECT_DIR$/scanityCore/scanity/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scanityCore/scanity/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanityModel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanityModel/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanityModel/model/model_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanityModel/model/model_interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +74,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758927807624</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Interface updates">
+      <option name="closed" value="true" />
+      <created>1758927908697</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758927908697</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

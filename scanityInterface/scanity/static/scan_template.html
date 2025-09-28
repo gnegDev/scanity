@@ -23,7 +23,7 @@
             <section class="image-section">
                 <div class="image-caption">Результат анализа</div>
                 <div class="image-wrapper" onclick="openImage('image2')">
-                    <img src="" 
+                    <img src="{{ scan['scan_url'] }}"
                             alt="Результат анализа" 
                             class="image-preview" 
                             id="image2">
@@ -36,7 +36,7 @@
                 <h3 class="info-title">Информация о снимке</h3>
                 <div class="info-content" id="info1">
                     <p><strong>ID снимка: </strong>{{ scan['scan_id'] }}</p>
-                    <p><strong>Дата: </strong>{{ scan['date'] }}</p>
+                    <p><strong>Дата снимка: </strong>{{ scan['date'] }}</p>
                     <p><strong>Пациент: </strong>{{ scan['name'] }}</p>
                     <p><strong>Описание: </strong>{{ scan['scan_description'] }}</p>
                 </div>
@@ -45,7 +45,11 @@
             <div class="info-panel">
                 <h3 class="info-title">Информация об анализе</h3>
                 <div class="info-content" id="info2">
-
+                    <p><strong>ID анализа: </strong>{{ scan['scan_analysis']['id'] }}</p>
+                    <p><strong>Дата анализа: </strong>{{ scan['scan_analysis']['date'] }}</p>
+                    <p><strong>Болен: </strong>{{ scan['scan_analysis']['has_illness'] }}</p>
+                    <p><strong>Диагноз: </strong>{{ scan['scan_analysis']['diagnosis'] }}</p>
+                    <p><strong>Описание: </strong>{{ scan['scan_analysis']['description'] }}</p>
                 </div>
             </div>
         </div>

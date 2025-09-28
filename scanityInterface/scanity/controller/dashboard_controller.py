@@ -21,11 +21,14 @@ def render_main_page():
         date = scan["date"].replace("T", " ")
         name = scan["name"]
 
+        diagnosis = scan["scan_analysis"]["diagnosis"]
+
         scans.append({
             "scan_id": scan_id,
             "scan_url": scan_url,
             "date": date,
-            "name": name
+            "name": name,
+            "diagnosis": diagnosis
         })
 
     return render_template("dashboard_template.html", scans=scans)

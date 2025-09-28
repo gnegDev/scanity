@@ -1,6 +1,5 @@
 package com.gnegdev.scanity.service.s3;
 
-import com.gnegdev.scanity.dto.UploadScanRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -27,8 +26,7 @@ public class S3ClientService {
     @Value("${minio.bucket}")
     private String bucket;
 
-    public String uploadFile(UploadScanRequest fileUploadRequest) throws IOException {
-        MultipartFile file = fileUploadRequest.getFile();
+    public String uploadFile(MultipartFile file) throws IOException {
 
         String filename = UUID.randomUUID() + "_" + file.getOriginalFilename();
 

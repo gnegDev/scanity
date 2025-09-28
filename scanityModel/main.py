@@ -1,5 +1,6 @@
-from flask import Flask, request
-import requests
+import json
+
+from flask import Flask, request, jsonify, Response
 import os
 
 from model import model_interface
@@ -13,22 +14,18 @@ def ping():
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
-    data = request.json()
+    data = request.form.to_dict()
 
-    scan = requests.get(data["url"]).content
+    scan = request.files["file"]
     data["file"] = scan
 
     print(data)
-
-    with open("scan.png", "wb") as file:
-        file.write(scan)
 
     response = model_interface.analyze(data)
 
     print(response)
 
     return response
-
 
 if __name__ == '__main__':
     app.run("0.0.0.0", debug=True, port=5050)
