@@ -13,12 +13,16 @@ def render_scan_page(scan_id):
     name = scan["name"]
     scan_description = scan["description"]
 
+    scan_analysis = scan["scan_analysis"]
+    scan_analysis["date"] = scan_analysis["date"].replace("T", " ")
+
     scan_data = {
         "scan_id": scan_id,
         "scan_url": scan_url,
         "date": date,
         "name": name,
-        "scan_description": scan_description
+        "scan_description": scan_description,
+        "scan_analysis": scan_analysis
     }
 
     return render_template("scan_template.html", scan=scan_data)

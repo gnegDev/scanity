@@ -1,6 +1,7 @@
 package com.gnegdev.scanity.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,6 +31,11 @@ public class Scan {
     @JoinColumn(name = "user_id")
     @JsonBackReference
     private User user;
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "scan_analysis_id")
+    @JsonProperty("scan_analysis")
+    private ScanAnalysis scanAnalysis;
 
     @Column(name = "date", nullable = false)
     @JdbcTypeCode(SqlTypes.TIMESTAMP)

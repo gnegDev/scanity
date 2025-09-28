@@ -20,6 +20,5 @@ results = [
 
 def analyze(data):
     result = choice(results)
-    result["file"] = data["file"]
 
     return result

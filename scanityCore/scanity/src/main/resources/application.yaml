@@ -19,3 +19,6 @@ minio:
 
   access-key: ${S3_ACCESS_KEY:minioadmin}
   secret-key: ${S3_SECRET_KEY:minioadmin}
+
+analysis:
+  endpoint: ${ANALYSIS_ENDPOINT:http://localhost:5050}
