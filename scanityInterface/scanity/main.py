@@ -9,6 +9,7 @@ from controller.sign_in_controller import sign_in_controller
 
 from controller.dashboard_controller import dashboard_controller
 from controller.scan_controller import scan_controller
+from controller.delete_controller import delete_controller
 
 from controller.upload_controller import upload_page_controller
 
@@ -23,6 +24,7 @@ app.register_blueprint(sign_in_controller)
 
 app.register_blueprint(dashboard_controller)
 app.register_blueprint(scan_controller)
+app.register_blueprint(delete_controller)
 
 app.register_blueprint(upload_page_controller)
 

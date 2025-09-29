@@ -27,7 +27,7 @@ public class Scan {
     @Column(name = "url", nullable = false, unique = true, length = 1024)
     private String url;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "user_id")
     @JsonBackReference
     private User user;

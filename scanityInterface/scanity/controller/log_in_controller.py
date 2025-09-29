@@ -24,4 +24,4 @@ def log_in_user():
 
         return redirect_response
 
-    return render_template("error_template.html", status_code=response.status_code, error=response.text)
+    return render_template("error_template.html", status_code=response.status_code, error=response.text, link="/auth")

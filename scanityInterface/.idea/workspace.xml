@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d26df6-0a3d-4f02-b5b3-68b24c5001fd" name="Changes" comment="Interface base">
-      <change afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/dto/AnalyzeScanRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanity/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scanityModel/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scanityModel/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scanityModel/model/dummy_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../scanityModel/model/model_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/dto/UploadScanRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/dto/UploadScanRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scanity/controller/delete_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scanity/util/converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/controller/ScanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/controller/ScanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/entity/Scan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/entity/Scan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/service/db/ScanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/service/db/ScanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/css/auth_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/css/auth_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/css/dashboard_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/css/dashboard_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/css/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/css/main_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/controller/log_in_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/log_in_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/controller/sign_in_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/sign_in_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/controller/upload_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/upload_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scanity/static/css/scan_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/css/scan_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/css/upload_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/css/upload_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/dashboard_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/dashboard_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/layout/base_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/layout/base_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/main_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/main_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/static/error_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/error_template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scanity/static/scan_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/scan_template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scanity/static/upload_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/upload_template.html" afterDir="false" />
     </list>
@@ -64,20 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.Dockerfile.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "interface",
-    "last_opened_file_path": "/home/gneg/Code/Projects/scanity/scanityInterface/scanity/static/images",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;interface&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gneg/Code/Projects/scanity/scanityInterface/scanity/static/images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scanity/static/images" />

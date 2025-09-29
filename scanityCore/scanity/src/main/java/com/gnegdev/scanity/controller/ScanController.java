@@ -39,6 +39,12 @@ public class ScanController {
         return ResponseEntity.ok(scan.get());
     }
 
+    @DeleteMapping("/delete/{uuid}")
+    public ResponseEntity<?> deleteScanById(@PathVariable("uuid") UUID uuid) {
+        scanService.deleteScanByUUID(uuid);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
     @GetMapping("/file/{filename}")
     public ResponseEntity<byte[]> getScanFile(@PathVariable("filename") String filename) throws IOException {
         byte[] data = s3ClientService.getFile(filename);
