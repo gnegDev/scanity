@@ -14,7 +14,7 @@
             <form id="dataForm" action="/upload" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="fileInput">Файл</label>
-                    <input type="file" id="fileInput" name="file" accept="image/*">
+                    <input type="file" id="fileInput" name="file" accept=".png, .jpeg, .jpg, .dcm">
                     <div class="file-info">Поддерживаемые форматы: DICOM, PNG, JPEG</div>
                 </div>
                 
@@ -24,7 +24,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="nameInput">Имя</label>
+                    <label for="nameInput">Имя пациента</label>
                     <input type="text" id="nameInput" name="name" placeholder="Введите имя пациента" required>
                 </div>
                 
@@ -84,7 +84,7 @@
             // Добавляем имя
             previewHTML += `
                 <div class="preview-item">
-                    <span class="preview-label">Пациент:</span> ${nameInput.value || 'не указано'}
+                    <span class="preview-label">Пациент:</span> ${nameInput.value || 'не указан'}
                 </div>
             `;
             

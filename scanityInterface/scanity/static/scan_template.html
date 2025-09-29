@@ -40,6 +40,7 @@
                     <p><strong>Пациент: </strong>{{ scan['name'] }}</p>
                     <p><strong>Описание: </strong>{{ scan['scan_description'] }}</p>
                 </div>
+                <a href="/delete/{{ scan['scan_id'] }}" class="panel-button">Удалить снимок</a>
             </div>
             
             <div class="info-panel">
@@ -51,6 +52,7 @@
                     <p><strong>Диагноз: </strong>{{ scan['scan_analysis']['diagnosis'] }}</p>
                     <p><strong>Описание: </strong>{{ scan['scan_analysis']['description'] }}</p>
                 </div>
+                <a href="#" class="panel-button">Анализировать заново</a>
             </div>
         </div>
     </div>

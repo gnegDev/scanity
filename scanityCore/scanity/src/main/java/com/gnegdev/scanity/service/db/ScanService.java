@@ -49,6 +49,26 @@ public class ScanService {
         return scanRepository.save(scan);
     }
 
+    public void deleteScanByUUID(UUID uuid) {
+        scanRepository.deleteById(uuid);
+    }
+
+//    public Scan updateScanAnalysis(UUID uuid) {
+//        Optional<Scan> optionalScan = scanRepository.findById(uuid);
+//        if (optionalScan.isPresent()) {
+//            Scan scan = optionalScan.get();
+//
+//            UploadScanRequest uploadScanRequest = new UploadScanRequest(
+//                    scan.getUser().getId()
+//            );
+//
+//            ScanAnalysisResponse scanAnalysisResponse = analysisClient.analyzeScan(uploadScanRequest);
+//            System.out.println(scanAnalysisResponse);
+//            ScanAnalysis scanAnalysis  = scanAnalysisService.uploadScanAnalysis(scanAnalysisResponse);
+//            scan.setScanAnalysis(scanAnalysis);
+//        }
+//    }
+
     public Optional<Scan> getScanByUUID(UUID uuid) {
         return scanRepository.findById(uuid);
     }

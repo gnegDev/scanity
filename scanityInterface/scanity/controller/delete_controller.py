@@ -1,0 +1,18 @@
+import json
+
+from flask import Blueprint, request, make_response, redirect, url_for, render_template
+import requests
+
+from config import API_HOST
+
+delete_controller = Blueprint("delete_controller", __name__, template_folder="../static")
+
+@delete_controller.route("/delete/<scan_id>", methods=["GET"])
+def delete_scan(scan_id):
+    response = requests.delete(API_HOST + f"/scanity/api/scans/delete/{scan_id}")
+
+    if response.status_code == 204:
+        redirect_response = make_response(redirect("/dashboard"))
+        return redirect_response
+
+    return render_template("error_template.html", status_code=response.status_code, error=response.text, link="/dashboard")
