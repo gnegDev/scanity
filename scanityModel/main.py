@@ -22,9 +22,7 @@ def analyze():
     print(data)
 
     response = model_interface.analyze(data)
-if (imageId == "image2") {
-            //     modalImg.style.filter = "invert()";
-            // }
+
     print(response)
 
     return response
