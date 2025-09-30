@@ -23,9 +23,15 @@ public class Scan {
 
     @Column(name = "filename", nullable = false, unique = true, length = 1024)
     private String filename;
-
     @Column(name = "url", nullable = false, unique = true, length = 1024)
     private String url;
+
+    @Column(name = "dicom_filename", nullable = false, unique = true, length = 1024)
+    @JsonProperty("dicom_filename")
+    private String dicomFilename;
+    @Column(name = "dicom_url", nullable = false, unique = true, length = 1024)
+    @JsonProperty("dicom_url")
+    private String dicomUrl;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

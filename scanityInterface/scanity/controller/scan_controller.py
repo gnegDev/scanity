@@ -25,4 +25,6 @@ def render_scan_page(scan_id):
         "scan_analysis": scan_analysis
     }
 
-    return render_template("scan_template.html", scan=scan_data)
+    download_link = API_HOST + f"/scanity/api/scans/file/{scan["dicom_filename"]}"
+
+    return render_template("scan_template.html", scan=scan_data, download_link=download_link)

@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d26df6-0a3d-4f02-b5b3-68b24c5001fd" name="Changes" comment="Interface base">
-      <change afterPath="$PROJECT_DIR$/scanity/controller/delete_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scanity/util/converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/controller/ScanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/controller/ScanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/entity/Scan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/entity/Scan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/service/db/ScanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityCore/scanity/src/main/java/com/gnegdev/scanity/service/db/ScanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/controller/log_in_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/log_in_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/controller/sign_in_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/sign_in_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/controller/upload_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/upload_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/css/scan_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/css/scan_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/error_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/error_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/scan_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/scan_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/upload_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/upload_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scanityModel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityModel/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
