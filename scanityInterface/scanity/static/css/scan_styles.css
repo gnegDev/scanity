@@ -43,6 +43,10 @@
     transition: transform 0.3s;
 }
 
+#image2 {
+    filter: invert();
+}
+
 .image-preview:hover {
     transform: scale(1.02);
 }

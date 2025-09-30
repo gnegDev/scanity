@@ -37,8 +37,12 @@ public class ScanService {
         scan.setFilename(filename);
         scan.setUrl(url);
 
+        String dicomFilename = s3ClientService.uploadFile(uploadScanRequest.getDicom());
+        String dicomUrl = s3ClientService.getUrl(dicomFilename);
+        scan.setDicomFilename(dicomFilename);
+        scan.setDicomUrl(dicomUrl);
+
         ScanAnalysisResponse scanAnalysisResponse = analysisClient.analyzeScan(uploadScanRequest);
-        System.out.println(scanAnalysisResponse);
         ScanAnalysis scanAnalysis  = scanAnalysisService.uploadScanAnalysis(scanAnalysisResponse);
         scan.setScanAnalysis(scanAnalysis);
 
@@ -50,6 +54,15 @@ public class ScanService {
     }
 
     public void deleteScanByUUID(UUID uuid) {
+        Optional<Scan> optionalScan = scanRepository.findById(uuid);
+
+        if (optionalScan.isPresent()) {
+            Scan scan = optionalScan.get();
+
+            s3ClientService.deleteFile(scan.getDicomFilename());
+            s3ClientService.deleteFile(scan.getFilename());
+        }
+
         scanRepository.deleteById(uuid);
     }
 

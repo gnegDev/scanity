@@ -25,26 +25,42 @@ def upload_page():
         }
 
         file = request.files["file"]
-        filename = file.filename
+        filename = Path(file.filename).stem
         file_bytes = file.read()
 
+        # if file.content_type == "application/dicom":
+        #     print("converting dicom...")
+        #     file_bytes = converter.dcm_to_png(file_bytes)
+        #     filename = Path(filename).stem + ".png"
+        #
+        # elif file.content_type == "image/jpeg":
+        #     print("converting jpeg...")
+        #     file_bytes = converter.jpg_to_png(file_bytes)
+        #     filename = Path(filename).stem + ".png"
+        #
+        # elif file.content_type == "image/png":
+        #     print("png file...")
         if file.content_type == "application/dicom":
-            print("converting dicom...")
-            file_bytes = converter.dcm_to_png(file_bytes)
-            filename = Path(filename).stem + ".png"
+            print("dicom file, preparing preview...")
+            dicom_file_bytes = file_bytes
+            preview_file_bytes = converter.dcm_to_png(file_bytes)
 
         elif file.content_type == "image/jpeg":
             print("converting jpeg...")
-            file_bytes = converter.jpg_to_png(file_bytes)
-            filename = Path(filename).stem + ".png"
+            dicom_file_bytes = converter.image_to_dcm(file_bytes)
+            preview_file_bytes = converter.jpg_to_png(file_bytes)
 
         elif file.content_type == "image/png":
-            print("png file...")
-
+            print("converting png file...")
+            dicom_file_bytes = converter.image_to_dcm(file_bytes)
+            preview_file_bytes = file_bytes
         else:
             return render_template("error_template.html", status_code=415, error="Unsupported Media Type", link="/upload")
 
-        files = {'file': (filename, file_bytes, "image/png")}
+        files = {
+            "file": (filename + "_preview.png", preview_file_bytes, "image/png"),
+            "dicom": (filename + ".dcm", dicom_file_bytes, "application/dicom")
+        }
 
         response = requests.post(API_HOST + "/scanity/api/scans/upload", data=body, files=files)
 

@@ -18,6 +18,9 @@ public class UploadScanRequest {
     @NotNull
     private final MultipartFile file;
 
+    @NotNull
+    private final MultipartFile dicom;
+
     private final LocalDateTime date;
 
     private final String name;

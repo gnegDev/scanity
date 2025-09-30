@@ -31,10 +31,10 @@ public class AnalysisClient {
         parts.add("description", request.getDescription());
 
         // Конвертация MultipartFile в Resource
-        Resource fileResource = new ByteArrayResource(request.getFile().getBytes()) {
+        Resource fileResource = new ByteArrayResource(request.getDicom().getBytes()) {
             @Override
             public String getFilename() {
-                return request.getFile().getOriginalFilename();
+                return request.getDicom().getOriginalFilename();
             }
         };
 

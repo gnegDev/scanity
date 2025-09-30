@@ -40,7 +40,7 @@
                     <p><strong>Пациент: </strong>{{ scan['name'] }}</p>
                     <p><strong>Описание: </strong>{{ scan['scan_description'] }}</p>
                 </div>
-                <a href="/delete/{{ scan['scan_id'] }}" class="panel-button">Удалить снимок</a>
+                <a href="{{ download_link }}" class="panel-button">Скачать DICOM</a>
             </div>
             
             <div class="info-panel">
@@ -52,7 +52,7 @@
                     <p><strong>Диагноз: </strong>{{ scan['scan_analysis']['diagnosis'] }}</p>
                     <p><strong>Описание: </strong>{{ scan['scan_analysis']['description'] }}</p>
                 </div>
-                <a href="#" class="panel-button">Анализировать заново</a>
+                <a href="/delete/{{ scan['scan_id'] }}" class="panel-button">Удалить снимок</a>
             </div>
         </div>
     </div>
@@ -73,6 +73,9 @@
             
             modal.style.display = "block";
             modalImg.src = img.src;
+            // if (imageId == "image2") {
+            //     modalImg.style.filter = "invert()";
+            // }
             
             // Update information panel
             updateInfoPanel(imageId);
