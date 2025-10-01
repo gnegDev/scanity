@@ -12,7 +12,8 @@
             {% if scans|length > 0 %}
                 {% for scan in scans %}
                     <div class="panel">
-                        <img src="{{ scan['scan_url'] }}" alt="Снимок КТ" class="panel-image">
+<!--                        <img src="{{ scan['scan_url'] }}" alt="Снимок КТ" class="panel-image">-->
+                        <img src="data:image/png;base64,{{ scan['scan_image'] }}" alt="Снимок КТ" class="panel-image">
                         <div class="panel-content">
                             <h3 class="panel-title">{{ scan['name'] }}</h3>
                             <p class="panel-description">{{ scan['diagnosis'] }}<br>{{ scan['date'] }}</p>

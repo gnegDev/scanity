@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d26df6-0a3d-4f02-b5b3-68b24c5001fd" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/scanity/controller/download_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scanityModel/model/model_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/../scanityModel/model/model_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/controller/dashboard_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/dashboard_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/controller/delete_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/delete_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/controller/scan_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/scan_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/static/dashboard_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/dashboard_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/static/scan_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/scan_template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="model" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -56,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "model",
+    "git-widget-placeholder": "noURLfr",
     "last_opened_file_path": "/home/gneg/Code/Projects/lung_classification_project",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
@@ -97,6 +109,7 @@
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
+          <option name="buildOnly" value="true" />
           <option name="containerName" value="" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
@@ -111,8 +124,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
