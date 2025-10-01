@@ -51,7 +51,7 @@ def analyze(data):
     if 'error' in result:
         print(f"Error: {result['error']}")
 
-    result["date"] = datetime.now().isoformat()
+    result["date"] = datetime.now().isoformat(timespec="seconds")
     return result
     # except:
     #     print("error")
