@@ -1,3 +1,5 @@
+from base64 import b64encode
+
 import requests
 from flask import Blueprint, render_template, request, make_response, redirect
 
@@ -17,6 +19,10 @@ def render_main_page():
 
     for scan in user.json()["scans"]:
         scan_id = scan["id"]
+
+        scan_filename = scan["filename"]
+        scan_image = b64encode(requests.get(API_HOST + f"/scanity/api/scans/file/{scan_filename}").content).decode('utf-8')
+
         scan_url = scan["url"]
         date = scan["date"].replace("T", " ")
         name = scan["name"]
@@ -26,6 +32,7 @@ def render_main_page():
         scans.append({
             "scan_id": scan_id,
             "scan_url": scan_url,
+            "scan_image": scan_image,
             "date": date,
             "name": name,
             "diagnosis": diagnosis

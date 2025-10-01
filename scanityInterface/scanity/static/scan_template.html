@@ -13,7 +13,7 @@
             <section class="image-section">
                 <div class="image-caption">Снимок</div>
                 <div class="image-wrapper" onclick="openImage('image1')">
-                    <img src="{{ scan['scan_url'] }}" 
+                    <img src="data:image/png;base64,{{ scan['scan_image'] }}"
                             alt="Снимок КТ" 
                             class="image-preview" 
                             id="image1">
@@ -23,8 +23,9 @@
             <section class="image-section">
                 <div class="image-caption">Результат анализа</div>
                 <div class="image-wrapper" onclick="openImage('image2')">
-                    <img src="{{ scan['scan_url'] }}"
-                            alt="Результат анализа" 
+<!--                    <img src="{{ scan['scan_url'] }}"-->
+                    <img src="data:image/png;base64,{{ scan['scan_image'] }}"
+                            alt="Результат анализа"
                             class="image-preview" 
                             id="image2">
                 </div>

@@ -1,6 +1,4 @@
-import json
-
-from flask import Blueprint, request, make_response, redirect, url_for, render_template
+from flask import Blueprint, make_response, redirect, render_template
 import requests
 
 from config import API_HOST

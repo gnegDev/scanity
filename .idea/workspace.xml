@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a3373c3-9057-4fae-b624-de680d35b2c2" name="Changes" comment="Converter, interface" />
+    <list default="true" id="7a3373c3-9057-4fae-b624-de680d35b2c2" name="Changes" comment="Model, finally" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,16 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;interface&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gneg/Code/Projects/scanity&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "model",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/gneg/Code/Projects/scanity"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7a3373c3-9057-4fae-b624-de680d35b2c2" name="Changes" comment="" />
@@ -112,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759243924938</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Model, finally">
+      <option name="closed" value="true" />
+      <created>1759316755988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759316755988</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -120,6 +128,7 @@
     <MESSAGE value="Interface updates" />
     <MESSAGE value="Model endpoint" />
     <MESSAGE value="Converter, interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Converter, interface" />
+    <MESSAGE value="Model, finally" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model, finally" />
   </component>
 </project>
