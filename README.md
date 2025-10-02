@@ -3,7 +3,7 @@
 ## Описание
 Приложение для анализа снимков КТ ОГК на основе искусственного интеллекта для автоматической классификации патологий.
 
-<img alt="dashboard_screenshot" src="https://github.com/user-attachments/assets/54ff2e01-d8b1-4bee-a943-00a0ae766c12" />
+<img alt="dashboard_page" src="https://github.com/user-attachments/assets/09a0e691-dc4c-4304-bbdd-e0c630337f50" />
 
 [Снимки экрана](https://github.com/gnegDev/scanity/wiki/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BA%D0%B8-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0)
 
