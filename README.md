@@ -21,7 +21,7 @@
 ## Quick start
 1. ```git clone https://github.com/gnegDev/scanity.git```
 2. ```cd scanity```
-3. ```docker compose up```
+3. ```docker compose up --build```
 4. Приложение будет доступно на https://localhost:5000/
 <br/><br/>
 
