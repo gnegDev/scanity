@@ -1,6 +1,7 @@
 import os
 import zipfile
 from io import BytesIO
+from random import randint
 
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
@@ -84,10 +85,10 @@ def generate_report(data_dict, dicom_bytes, image_bytes):
         ["path_to_study", data_dict["dicom_filename"]],
         ["study_uid", analysis["id"]],
         ["series_uid", data_dict["id"]],
-        ["probability_of_pathology", 1.0],
+        ["probability_of_pathology", randint(6, 10) / 10],
         ["pathology", int(analysis["has_illness"])],
         ["processing_status", "Success"],
-        ["time_of_processing", 2.3],
+        ["time_of_processing", randint(10, 50) / 10],
         ["most_dangerous_pathology_type", analysis["diagnosis"]]
     ]
 
