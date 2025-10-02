@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92d26df6-0a3d-4f02-b5b3-68b24c5001fd" name="Changes" comment="report downloading">
+    <list default="true" id="92d26df6-0a3d-4f02-b5b3-68b24c5001fd" name="Changes" comment="ui fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/dashboard_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/dashboard_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/main_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/main_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scanity/static/scan_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/scan_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/controller/dashboard_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/controller/dashboard_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/static/images/secha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scanity/static/layout/base_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/scanity/static/layout/base_template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +41,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/gnegDev/scanity.git&quot;,
     &quot;accountId&quot;: &quot;12bfb3ac-e9db-4e52-bafa-aa82d473e726&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;gnegDev&quot;,
+    &quot;repository&quot;: &quot;scanity&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -174,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759398735440</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ui fix">
+      <option name="closed" value="true" />
+      <created>1759401218893</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759401218893</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +211,7 @@
     <MESSAGE value="fix" />
     <MESSAGE value="nomoreopenurlsfors3" />
     <MESSAGE value="report downloading" />
-    <option name="LAST_COMMIT_MESSAGE" value="report downloading" />
+    <MESSAGE value="ui fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui fix" />
   </component>
 </project>
