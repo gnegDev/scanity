@@ -35,7 +35,7 @@ def render_main_page():
             "scan_image": scan_image,
             "date": date,
             "name": name,
-            "diagnosis": diagnosis
+            "diagnosis": diagnosis.capitalize()
         })
 
     return render_template("dashboard_template.html", scans=scans)
