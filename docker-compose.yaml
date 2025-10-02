@@ -33,6 +33,8 @@ services:
     build: scanityModel
     ports:
       - "5050:5050"
+    environment:
+      - TZ=Europe/Moscow
 
   db:
     image: postgres:17.4
